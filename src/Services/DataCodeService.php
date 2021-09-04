@@ -16,16 +16,6 @@ use Liuweiliang\DataCode\Constants\DataCodeConstant;
 
 class DataCodeService implements DataCodeConstant
 {
-    private static $config = [];
-
-    /**
-     * DataCodeService constructor.
-     */
-    public function __construct()
-    {
-        self::$config = config('datacodes');//获取对照字典
-    }
-
     /**
      * FunctionName：encode
      * Description：编码
@@ -35,12 +25,13 @@ class DataCodeService implements DataCodeConstant
      */
     public static function encode(string $string): string
     {
+        $config = config('datacode');
         $character = base64_encode($string);
-        $letters = self::$config['letter'];
+        $letters = $config['letter'];
         foreach ($letters as $key => $letter) {
             $character = str_replace($key, $letter, $character);
         }
-        return $character . self::$config['suffix'];
+        return $character . $config['suffix'];
     }
 
 
@@ -53,8 +44,9 @@ class DataCodeService implements DataCodeConstant
      */
     public static function decode(string $string): string
     {
-        $character = str_replace(self::$config['suffix'], '', $string);
-        $letters = array_flip(self::$config['letter']);
+        $config = config('datacode');
+        $character = str_replace($config['suffix'], '', $string);
+        $letters = array_flip($config['letter']);
         foreach ($letters as $key => $letter) {
             $character = str_replace($key, $letter, $character);
         }
