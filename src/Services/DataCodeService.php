@@ -10,11 +10,11 @@
  * @version v1.0
  */
 
-namespace Liuweiliang\DataCodes\Services;
+namespace Liuweiliang\DataCode\Services;
 
-use Liuweiliang\DataCodes\Constants\DataCodecConstant;
+use Liuweiliang\DataCode\Constants\DataCodeConstant;
 
-class DataCodeService implements DataCodecConstant
+class DataCodeService implements DataCodeConstant
 {
     private static $config = [];
 

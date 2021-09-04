@@ -1,7 +1,7 @@
 <?php
 /**
  * Copyright (C), 2021-2021, https://github.com/lwlzq/dataCodec.git.
- * FileName: DataCodesProvider.php
+ * FileName: DataCodeProvider.php
  * Description: 发布服务
  *
  * @author lwl
@@ -14,10 +14,10 @@
 namespace Liuweiliang\DataCodes;
 
 use Illuminate\Support\ServiceProvider;
-use Liuweiliang\DataCodes\Constants\DataCodecConstant;
-use Liuweiliang\DataCodes\Services\DataCodeService;
+use Liuweiliang\DataCode\Constants\DataCodeConstant;
+use Liuweiliang\DataCode\Services\DataCodeService;
 
-class DataCodesProvider extends ServiceProvider
+class DataCodeProvider extends ServiceProvider
 {
     /**
      * FunctionName：boot
@@ -27,7 +27,7 @@ class DataCodesProvider extends ServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/Config/datacodes.php' => config_path('datacodes.php'),
+            __DIR__ . '/Config/datacode.php' => config_path('datacode.php'),
         ]);
     }
 
@@ -39,12 +39,12 @@ class DataCodesProvider extends ServiceProvider
     public function register()
     {
         //单例
-        $this->app->singleton('datacodes', function ($app) {
+        $this->app->singleton('datacode', function ($app) {
             return new DataCodeService($app['config']);
         });
 
         //使用bind绑定实例到接口以便依赖注入
-        $this->app->bind(DataCodecConstant::class, function () {
+        $this->app->bind(DataCodeConstant::class, function () {
             return new DataCodeService();
         });
     }

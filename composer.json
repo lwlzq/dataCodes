@@ -2,7 +2,7 @@
     "name": "liuweiliang/data-codes",
     "autoload": {
         "psr-4": {
-            "Liuweiliang\\DataCodes\\": "src/"
+            "Liuweiliang\\DataCode\\": "src/"
         }
     },
     "authors": [

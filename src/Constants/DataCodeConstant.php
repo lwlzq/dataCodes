@@ -1,7 +1,7 @@
 <?php
 /**
  * Copyright (C), 2021-2021, https://github.com/lwlzq/dataCodec.git.
- * FileName: DataCodecConstant.php
+ * FileName: DataCodeConstant.php
  * Description: 契约层
  *
  * @author lwl
@@ -10,9 +10,9 @@
  * @version v1.0
  */
 
-namespace Liuweiliang\DataCodes\Constants;
+namespace Liuweiliang\DataCode\Constants;
 
-interface DataCodecConstant
+interface DataCodeConstant
 {
     /**
      * FunctionName：encode

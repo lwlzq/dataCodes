@@ -1,7 +1,7 @@
 <?php
 /**
  * Copyright (C), 2021-2021, https://github.com/lwlzq/dataCodec.git.
- * FileName: datacodes.php
+ * FileName: datacode.php
  * Description: 编码数据对照字典
  *
  * @author lwl

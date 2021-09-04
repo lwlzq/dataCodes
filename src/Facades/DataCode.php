@@ -1,7 +1,7 @@
 <?php
 /**
  * Copyright (C), 2021-2021, https://github.com/lwlzq/dataCodec.git.
- * FileName: DataCodes.php
+ * FileName: DataCode.php
  * Description: 说明
  *
  * @author lwl
@@ -9,9 +9,9 @@
  * @Update Date    2021/9/4 17:08 By lwl
  * @version v1.0
  */
-namespace Liuweiliang\DataCodes\Facades;
+namespace Liuweiliang\DataCode\Facades;
 use Illuminate\Support\Facades\Facade;
-class DataCodes extends Facade
+class DataCode extends Facade
 {
     protected static function getFacadeAccessor()
     {
