@@ -20,9 +20,9 @@ php artisan vendor:publish
 ### 4
 ```angular2html
 数据编码:
-    DataCodeService::encode('待加密字符串');
+    DataCodeService::encode('待编码字符串');
 
 
 数据解码:
-    DataCodeService::decode('待解密字符串')
+    DataCodeService::decode('待解码字符串')
 ```
