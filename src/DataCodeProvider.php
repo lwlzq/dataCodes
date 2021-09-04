@@ -11,7 +11,7 @@
  */
 
 
-namespace Liuweiliang\DataCodes;
+namespace Liuweiliang\DataCode;
 
 use Illuminate\Support\ServiceProvider;
 use Liuweiliang\DataCode\Constants\DataCodeConstant;
